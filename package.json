@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "concurrently -k \"tsc -p ./src/server -w\" \"tsc -p ./src/client -w\" \"nodemon ./dist/server/server.js\""
   },
   "author": "Ariel Itzli Molina Sanchez",
   "license": "ISC",
@@ -16,6 +16,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
-    "eslint": "^7.17.0"
+    "concurrently": "^5.3.0",
+    "eslint": "^7.17.0",
+    "nodemon": "^2.0.7"
   }
 }
